@@ -6,12 +6,25 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "export": "next export"
+    "export": "next export",
+    "relay": "relay-compiler --src ./src --schema ./schema.graphql --extensions js jsx"
   },
   "dependencies": {
     "netlify-identity-widget": "^1.8.0",
     "next": "9.4.0",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "react-relay": "^10.0.1"
+  },
+  "devDependencies": {
+    "babel-plugin-relay": "^10.0.1",
+    "graphql": "^15.3.0",
+    "relay-compiler": "^10.0.1",
+    "relay-config": "^10.0.1"
+  },
+  "babel": {
+    "plugins": [
+      "relay"
+    ]
   }
 }
